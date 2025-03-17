@@ -63,29 +63,6 @@ def store_embedding(file: str, page: str, chunk: str, embedding: list):
     )
     print(f"Stored embedding for: {chunk}")
 
-def merge_pdfs_in_folder(folder_path, output_filename="merged_result.pdf"):
-    """
-    Merges all PDFs in the specified folder into a single PDF.
-    """
-    pdf_writer = PdfWriter()
-    pdf_files = sorted(
-        [f for f in os.listdir(folder_path) if f.endswith(".pdf")]
-    )  # Sort ensures a consistent order
-
-    if not pdf_files:
-        print("No PDF files found in the folder.")
-        return
-
-    for pdf_file in pdf_files:
-        pdf_path = os.path.join(folder_path, pdf_file)
-        pdf_writer.append(pdf_path)
-
-    output_path = os.path.join(folder_path, output_filename)
-    with open(output_path, "wb") as output_pdf:
-        pdf_writer.write(output_pdf)
-
-    print(f"PDFs merged successfully! Saved as: {output_path}")
-
 # extract the text from a PDF by page
 def extract_text_from_pdf(pdf_path):
     """Extract text from a PDF file."""
