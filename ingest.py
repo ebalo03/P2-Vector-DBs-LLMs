@@ -8,7 +8,7 @@ import fitz
 import re
 
 # Initialize Redis connection
-redis_client = redis.Redis(host="localhost", port=6379, db=0)
+redis_client = redis.Redis(host="DS4300", port=6379, db=0)
 
 VECTOR_DIM = 768
 INDEX_NAME = "embedding_index"
@@ -79,7 +79,7 @@ def extract_text_from_pdf(pdf_path):
 
 
 # split the text into chunks with overlap
-def split_text_into_chunks(text, chunk_size=300, overlap=50):
+def split_text_into_chunks(text, chunk_size=50, overlap=30):
     """Split text into chunks of approximately chunk_size words with overlap."""
     words = text.split()
     chunks = []
@@ -133,7 +133,7 @@ def main():
     clear_redis_store()
     create_hnsw_index()
 
-    process_pdfs("/Users/evabalogun/Library/CloudStorage/OneDrive-NortheasternUniversity/DS/DS 4300/Practicum 2/ClassNotes")
+    process_pdfs("C:\\Users\\omint\\OneDrive\\Documents\\P2_LLM\\ClassNotes")
     print("\n---Done processing PDFs---\n")
     query_redis("What is a binary search tree?")
 

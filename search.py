@@ -6,10 +6,9 @@ import ollama
 from redis.commands.search.query import Query
 from redis.commands.search.field import VectorField, TextField
 
-
 # Initialize models
 # embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-redis_client = redis.StrictRedis(host="localhost", port=6379, decode_responses=True)
+redis_client = redis.StrictRedis(host="DS4300", port=6379, decode_responses=True)
 
 VECTOR_DIM = 768
 INDEX_NAME = "embedding_index"
