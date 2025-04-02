@@ -1,9 +1,11 @@
 ## Practical 02 – Vector DBs & LLMs
-### Project needs to be functional by March 24’s exam
-### Final deliverables are due WED APRIL 2 @ 11:59pm
-### More info forthcoming on deliverables.
+#### Due: Wednesday, April 2
 ~~~
-Team Members: Eva Balogun, Olivia Mintz, Nusha Bhat
+Team Members:
+- Eva Balogun
+- Olivia Mintz
+- Nusha Bhat
+
 GitHub Link: https://github.com/ebalo03/P2-Vector-DBs-LLMs
 Slides Link: https://docs.google.com/presentation/d/1aOePmcNDtWSWX47PMSNGDYFN1ik1AcfmukTtWA5UAho/edit?usp=sharing
 ~~~
