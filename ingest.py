@@ -79,7 +79,7 @@ def extract_text_from_pdf(pdf_path):
 
 
 # split the text into chunks with overlap
-def split_text_into_chunks(text, chunk_size=50, overlap=30):
+def split_text_into_chunks(text, chunk_size=400, overlap=50):
     """Split text into chunks of approximately chunk_size words with overlap."""
     words = text.split()
     chunks = []
