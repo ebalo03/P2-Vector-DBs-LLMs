@@ -6,6 +6,7 @@ from redis.commands.search.query import Query
 import os
 import fitz
 import re
+from sentence_transformers import SentenceTransformer
 
 # Initialize Redis connection
 redis_client = redis.Redis(host="DS4300", port=6379, db=0)
@@ -15,6 +16,13 @@ INDEX_NAME = "embedding_index"
 DOC_PREFIX = "doc:"
 DISTANCE_METRIC = "COSINE"
 
+# Load sentence transformers embedding model -- used for testing
+# embedding_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+
+# def get_embedding(text: str) -> list:
+#     """Generate an embedding for the given text using MiniLM."""
+#     embedding = embedding_model.encode(text).tolist()  # Convert numpy array to list
+#     return embedding
 
 # used to clear the redis vector store
 def clear_redis_store():
