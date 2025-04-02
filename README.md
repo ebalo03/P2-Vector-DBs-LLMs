@@ -1,7 +1,7 @@
 ## DS 4300 - Practical 02 – RAG System
 #### Final Deliverables Due: Wednesday, April 2 @ 11:59pm
 ~~~
-Team Members:
+Team Members
 - Eva Balogun
 - Olivia Mintz
 - Nusha Bhat
@@ -29,11 +29,11 @@ cd P2-Vector-DBs-LLMs
 - Install Dependencies
 pip install -r requirements.txt
 - Install & Run Ollama
-- Pull Models used for this practical
+- Pull Models used for this practical (
 ollama pull mistral
-ollama pull nous-hermes
+ollama pull nous-hermes)
 - Run Pipeline
-chunk size, overlap, embedding-model,  vector-db, llm, query
+(chunk size, overlap, embedding-model,  vector-db, llm, query)
 
 
 ## Evaluation
