@@ -5,9 +5,9 @@ from pinecone import Pinecone, ServerlessSpec
 from sentence_transformers import SentenceTransformer
 
 # Configuration
-API_KEY = "pcsk_6B66P9_CdVUvTQb5uBC615FedRCbKrBgbwpp5BDwn1E1jJsnTT4S9wVJHKKmyB4gQmUCDH"  # Replace with actual API key
+API_KEY = "pcsk_6B66P9_CdVUvTQb5uBC615FedRCbKrBgbwpp5BDwn1E1jJsnTT4S9wVJHKKmyB4gQmUCDH"
 INDEX_NAME = "classnotes"
-DIMENSION = 768  # Adjust based on embedding model
+DIMENSION = 768  #
 
 # Initialize Pinecone client
 pc = Pinecone(api_key=API_KEY)
@@ -28,7 +28,7 @@ else:
 index = pc.Index(INDEX_NAME)
 
 # Load embedding model
-EMBEDDING_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+EMBEDDING_MODEL = ollama("nomic-embed-text")
 
 
 # Function to embed text
