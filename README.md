@@ -27,7 +27,6 @@ git clone https://github.com/ebalo03/P2-Vector-DBs-LLMs.git
 cd P2-Vector-DBs-LLMs
 - Activate Virtual Environment
 - Install Dependencies
-pip install -r requirements.txt
 - Install & Run Ollama
 - Pull Models used for this practical (
 ollama pull mistral
